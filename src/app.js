@@ -1,5 +1,5 @@
 import { cal, setSchedules, saveNewSchedule } from "./default.js";
-import { CalendarList, findCalendar } from "./data/calendars.js"; /* ES6 */
+import { CalendarList, findCalendar } from "../resources/data/calendars.js"; /* ES6 */
 import * as $ from "jquery";
 
 const storage = require("electron-json-storage");

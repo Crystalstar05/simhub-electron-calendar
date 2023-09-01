@@ -5,13 +5,16 @@ import {
   initCalendar,
   CalendarList,
   findCalendar,
-} from "./data/calendars.js"; /* ES6 */
-import { ScheduleInfo } from "./data/schedules.js"; /* ES6 */
-import { updatePopupWindowIsAllDayChecked } from "./data/updatePopupWindowIsAllDayChecked.js";
+} from "../resources/data/calendars.js"; /* ES6 */
+import { ScheduleInfo } from "../resources/data/schedules.js"; /* ES6 */
+import { updatePopupWindowIsAllDayChecked } from "../resources/data/updatePopupWindowIsAllDayChecked.js";
 var throttle = require("tui-code-snippet/tricks/throttle");
 const storage = require("electron-json-storage");
-// const dataPath = storage.getDataPath();
-// console.log(dataPath);
+
+storage.setDataPath(__dirname + '../resources/data');
+const dataPath = storage.getDataPath();
+console.log(app);
+console.log(dataPath);
 var Chance = require("chance");
 
 // Instantiate Chance so it can be used
